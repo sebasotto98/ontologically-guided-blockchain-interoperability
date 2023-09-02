@@ -110,6 +110,7 @@
         "protoc",
         "protos",
         "qscc",
+		"rdflib",
         "recoverupdateackmessage",
         "RUSTC",
         "Rwset",

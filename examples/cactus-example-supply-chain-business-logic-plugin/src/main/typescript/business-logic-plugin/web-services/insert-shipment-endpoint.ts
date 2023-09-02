@@ -14,7 +14,6 @@ import {
   IWebServiceEndpoint,
 } from "@hyperledger/cactus-core-api";
 import { registerWebServiceEndpoint } from "@hyperledger/cactus-core";
-import { InsertShipmentRequest } from "../../generated/openapi/typescript-axios/index";
 import {
   DefaultApi as FabricApi,
   FabricContractInvocationType,
@@ -22,6 +21,10 @@ import {
 } from "@hyperledger/cactus-plugin-ledger-connector-fabric";
 
 import OAS from "../../../json/openapi.json";
+
+import { InsertShipmentRequest } from "../../model/business-entities";
+
+import { SupplyChainCactusPlugin } from "../supply-chain-cactus-plugin";
 
 export interface IInsertShipmentEndpointOptions {
   logLevel?: LogLevelDesc;
@@ -96,6 +99,32 @@ export class InsertShipmentEndpoint implements IWebServiceEndpoint {
     try {
       const { shipment } = req.body as InsertShipmentRequest;
       this.log.debug(`${tag} %o`, shipment);
+
+      const shipper = SupplyChainCactusPlugin.map(shipment.shipper);
+
+      // TODO: Move this to the transaction start in each entity's backend instead of hardcoding in the plugin
+      const context = ["", "Product Sale"];
+
+      const validationPasses = SupplyChainCactusPlugin.validate(
+        shipper,
+        context[0],
+        context[1],
+      );
+
+      if (!validationPasses) {
+        // TODO - FUTURE: construct relative payload with failure type and cause to display in error modal
+        // Only for POC
+        throw new Error(
+          "Transaction validation failed for shipper " + shipper?.name,
+        );
+      }
+
+      this.log.info(
+        "Transaction validation passed for shipper " +
+          shipper?.name +
+          ". Proceeding with transaction execution",
+      );
+
       const request: RunTransactionRequest = {
         signingCredential: {
           keychainId: this.keychainId,

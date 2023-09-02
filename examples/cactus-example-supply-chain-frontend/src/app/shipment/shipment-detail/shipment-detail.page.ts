@@ -6,16 +6,17 @@ import { ModalController } from "@ionic/angular";
 
 import { ApiClient } from "@hyperledger/cactus-api-client";
 
-import {
-  Shipment,
-  Bookshelf,
-  DefaultApi as SupplyChainApi,
-} from "@hyperledger/cactus-example-supply-chain-business-logic-plugin";
-
 import { Logger, LoggerProvider } from "@hyperledger/cactus-common";
 import { QUORUM_DEMO_LEDGER_ID } from "src/constants";
 
 import { AuthConfig } from "../../common/auth-config";
+
+import {
+  Shipment,
+  Bookshelf,
+  BusinessRole,
+  DefaultApi as SupplyChainApi,
+} from "../../../../../cactus-example-supply-chain-business-logic-plugin/src/main/typescript/model/business-entities";
 
 @Component({
   selector: "app-shipment-detail",
@@ -30,6 +31,7 @@ export class ShipmentDetailPage implements OnInit {
   public shipment: Shipment;
   public bookshelves: Bookshelf[];
   public bookshelfIds: string[];
+  private shipper: BusinessRole;
 
   constructor(
     private readonly baseClient: ApiClient,
@@ -61,15 +63,26 @@ export class ShipmentDetailPage implements OnInit {
       },
     );
 
+    if (!this.shipper) {
+      this.shipper = {
+        entity: "Shipper",
+        name: "Global Cargo Solutions",
+        inventoryQuantity: 100,
+        accountBalance: 100,
+      };
+    }
+
     if (!this.shipment) {
       this.shipment = {
         id: uuidv4(),
         bookshelfId: "",
+        shipper: this.shipper,
       };
     }
     this.form = this.formBuilder.group({
       id: [this.shipment.id, Validators.required],
       bookshelfId: [this.shipment.bookshelfId, Validators.required],
+      shipper: [this.shipment.shipper, Validators.required],
     });
 
     await this.loadData();

@@ -9,7 +9,7 @@ library SupplyChainAppDataModelLib {
         string location;
         string startedAt;
         string endedAt;
-        string harvester;
+        BusinessRole harvester;
     }
 
     struct BookshelfEntity {

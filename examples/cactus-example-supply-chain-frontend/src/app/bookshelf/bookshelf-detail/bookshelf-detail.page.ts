@@ -7,10 +7,11 @@ import { ModalController } from "@ionic/angular";
 import { ApiClient } from "@hyperledger/cactus-api-client";
 
 import {
-  BambooHarvest,
+  Bamboo,
   Bookshelf,
+  BusinessRole,
   DefaultApi as SupplyChainApi,
-} from "@hyperledger/cactus-example-supply-chain-business-logic-plugin";
+} from "../../../../../cactus-example-supply-chain-business-logic-plugin/src/main/typescript/model/business-entities";
 
 import { Logger, LoggerProvider } from "@hyperledger/cactus-common";
 import { QUORUM_DEMO_LEDGER_ID } from "src/constants";
@@ -28,8 +29,9 @@ export class BookshelfDetailPage implements OnInit {
   public form: FormGroup;
   @Input()
   public bookshelf: Bookshelf;
-  public bambooHarvests: BambooHarvest[];
+  public bambooHarvests: Bamboo[];
   public bambooHarvestIds: string[];
+  private manufacturer: BusinessRole;
 
   constructor(
     private readonly baseClient: ApiClient,
@@ -61,17 +63,28 @@ export class BookshelfDetailPage implements OnInit {
       },
     );
 
+    if (!this.manufacturer) {
+      this.manufacturer = {
+        entity: "Manufacturer",
+        name: "WoodCraft Manufacturing",
+        inventoryQuantity: 100,
+        accountBalance: 100,
+      };
+    }
+
     if (!this.bookshelf) {
       this.bookshelf = {
         id: uuidv4(),
         shelfCount: 5,
         bambooHarvestId: "",
+        manufacturer: this.manufacturer,
       };
     }
     this.form = this.formBuilder.group({
       id: [this.bookshelf.id, Validators.required],
       shelfCount: [this.bookshelf.shelfCount, Validators.required],
       bambooHarvestId: [this.bookshelf.bambooHarvestId, Validators.required],
+      manufacturer: [this.bookshelf.manufacturer, Validators.required],
     });
 
     await this.loadData();

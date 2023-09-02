@@ -21,12 +21,13 @@ import {
 } from "@hyperledger/cactus-plugin-ledger-connector-besu";
 
 import OAS from "../../../json/openapi.json";
-import { InsertBookshelfRequest } from "../../generated/openapi/typescript-axios/index";
+
+import { InsertBookshelfRequest } from "../../model/business-entities";
+
+import { SupplyChainCactusPlugin } from "../supply-chain-cactus-plugin";
 
 export interface IInsertBookshelfEndpointOptions {
   logLevel?: LogLevelDesc;
-  //  contractAddress: string;
-  //  contractAbi: any;
   contractName: string;
   besuApi: BesuApi;
   web3SigningCredential: Web3SigningCredential;
@@ -45,8 +46,6 @@ export class InsertBookshelfEndpoint implements IWebServiceEndpoint {
     const fnTag = `${this.className}#constructor()`;
     Checks.truthy(opts, `${fnTag} arg options`);
     Checks.truthy(opts.besuApi, `${fnTag} options.besuApi`);
-    // Checks.truthy(opts.contractAddress, `${fnTag} options.contractAddress`);
-    // Checks.truthy(opts.contractAbi, `${fnTag} options.contractAbi`);
     Checks.nonBlankString(
       opts.contractName,
       `${fnTag} options.contractAddress`,
@@ -99,6 +98,32 @@ export class InsertBookshelfEndpoint implements IWebServiceEndpoint {
     try {
       const { bookshelf } = req.body as InsertBookshelfRequest;
       this.log.debug(`${tag} %o`, bookshelf);
+
+      const manufacturer = SupplyChainCactusPlugin.map(bookshelf.manufacturer);
+
+      // TODO: Move this to the transaction start in each entity's backend instead of hardcoding in the plugin
+      const context = ["Shipper", "Product Sale"];
+
+      const validationPasses = SupplyChainCactusPlugin.validate(
+        manufacturer,
+        context[0],
+        context[1],
+      );
+
+      if (!validationPasses) {
+        // TODO - FUTURE: construct relative payload with failure type and cause to display in error modal
+        // Only for POC
+        throw new Error(
+          "Transaction validation failed for manufacturer " +
+            manufacturer?.name,
+        );
+      }
+
+      this.log.info(
+        "Transaction validation passed for manufacturer " +
+          manufacturer?.name +
+          ". Proceeding with transaction execution",
+      );
 
       const {
         data: { callOutput, transactionReceipt },

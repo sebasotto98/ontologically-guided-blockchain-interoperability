@@ -107,15 +107,6 @@
       "path": "./packages/cactus-test-verifier-client/tsconfig.json"
     },
     {
-      "path": "./examples/cactus-example-carbon-accounting-backend/tsconfig.json"
-    },
-    {
-      "path": "./examples/cactus-example-carbon-accounting-business-logic-plugin/tsconfig.json"
-    },
-    {
-      "path": "./examples/cactus-example-carbon-accounting-frontend/tsconfig.json"
-    },
-    {
       "path": "./examples/cactus-example-supply-chain-backend/tsconfig.json"
     },
     {

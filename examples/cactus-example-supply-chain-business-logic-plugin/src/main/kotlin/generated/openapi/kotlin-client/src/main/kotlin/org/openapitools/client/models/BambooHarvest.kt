@@ -48,7 +48,7 @@ data class BambooHarvest (
     val endedAt: kotlin.String,
 
     @Json(name = "harvester")
-    val harvester: kotlin.String
+    val harvester: kotlin.Any
 
 )
 

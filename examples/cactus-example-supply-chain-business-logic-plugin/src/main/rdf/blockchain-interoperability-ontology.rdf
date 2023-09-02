@@ -1,0 +1,665 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:archimate="http://bp4mc2.org/def/archimate#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#aggregation -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#aggregation"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#assignment -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#assignment"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#association -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#association"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#composition -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#composition"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#flow -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#flow"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#realization -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#realization"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#serving -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#serving"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#specialization -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#specialization"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#triggering -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#triggering"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#writeAccess -->
+
+    <AnnotationProperty rdf:about="http://bp4mc2.org/def/archimate#writeAccess"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#ApplicationComponent -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#ApplicationComponent"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#ApplicationInterface -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#ApplicationInterface"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#ApplicationService -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#ApplicationService"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#Artifact -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#Artifact"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#BusinessFunction -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#BusinessFunction"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#BusinessObject -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#BusinessObject"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#BusinessProcess -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#BusinessProcess"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#BusinessRole -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#BusinessRole"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#CommunicationNetwork -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#CommunicationNetwork"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#Contract -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#Contract"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#DataObject -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#DataObject"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#Device -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#Device"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#Node -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#Node"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#Path -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#Path"/>
+    
+
+
+    <!-- http://bp4mc2.org/def/archimate#TechnologyService -->
+
+    <Class rdf:about="http://bp4mc2.org/def/archimate#TechnologyService"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessFunction"/>
+        <archimate:flow rdf:resource="urn:uuid:id-94c418f274254d8a920235a645303a6e"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-01a27c33b42045f58a72188c63a03964"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-98c01165200a4f37872c7b85865a05d4"/>
+        <rdfs:label xml:lang="en">Manufacture</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-01a27c33b42045f58a72188c63a03964 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-01a27c33b42045f58a72188c63a03964">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#ApplicationService"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-94b45ca39ca948ceaf8e7298e4f4319a"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-e5ba21c278ba4a8486f8d3bf1192d89c"/>
+        <rdfs:label xml:lang="en">Order Management Service</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-12fe30055f3b403ca291d4680c118a23 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-12fe30055f3b403ca291d4680c118a23">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <rdfs:label xml:lang="en">Semantic Interoperability Specification</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-152aef559b5e408e96531aa5e639d227 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-152aef559b5e408e96531aa5e639d227">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-eeff92e7c32c4ddb9e43c1cb39fb5755"/>
+        <rdfs:label xml:lang="en">Supply Chain Terminology</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-22e64c7543f345279a421860d491d376 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-22e64c7543f345279a421860d491d376">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-152aef559b5e408e96531aa5e639d227"/>
+        <rdfs:label xml:lang="en">Distribution</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-2d09b072e6324b54881d8e0e4e0d064e -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-2d09b072e6324b54881d8e0e4e0d064e">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#TechnologyService"/>
+        <archimate:realization rdf:resource="urn:uuid:id-01a27c33b42045f58a72188c63a03964"/>
+        <archimate:realization rdf:resource="urn:uuid:id-e645b7b29f464c3db5ccee841a68257a"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-152aef559b5e408e96531aa5e639d227"/>
+        <rdfs:label xml:lang="en">Transaction Processing</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-3354afeb8f9b4334943e352a1e8fe3fd -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-3354afeb8f9b4334943e352a1e8fe3fd">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:aggregation rdf:resource="urn:uuid:id-eab9887914264b07932f3cd2159e4caa"/>
+        <archimate:association rdf:resource="urn:uuid:id-427715fd2c1c4105a6f80f6778cb9c34"/>
+        <rdfs:label xml:lang="en">Shipment</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-3436ba2b0aeb421fa937467f5ded0c06 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-3436ba2b0aeb421fa937467f5ded0c06">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessRole"/>
+        <archimate:association rdf:resource="urn:uuid:id-67ccb819d7284462a8b9045f23e437d0"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-f32e4603611141d899779f82e71be7ba"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f"/>
+        <rdfs:label xml:lang="en">Wholesaler</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-38b251df006e460c924fe1db102762ad -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-38b251df006e460c924fe1db102762ad">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#CommunicationNetwork"/>
+        <archimate:realization rdf:resource="urn:uuid:id-4675e30568284dfa9f43da16bc79c9a6"/>
+        <rdfs:label xml:lang="en">Internet</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-427715fd2c1c4105a6f80f6778cb9c34 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-427715fd2c1c4105a6f80f6778cb9c34">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-152aef559b5e408e96531aa5e639d227"/>
+        <rdfs:label xml:lang="en">Shipping</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-4675e30568284dfa9f43da16bc79c9a6 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-4675e30568284dfa9f43da16bc79c9a6">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#Path"/>
+        <rdfs:label xml:lang="en">Blockchain Network Protocol</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-4961167dde7e41dfa9b6de32eb483a39 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-4961167dde7e41dfa9b6de32eb483a39">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#Node"/>
+        <archimate:assignment rdf:resource="urn:uuid:id-2d09b072e6324b54881d8e0e4e0d064e"/>
+        <rdfs:label xml:lang="en">Enterprise Application Server</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-4cdbd5f67263460aa9ca7120bbb96f20 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-4cdbd5f67263460aa9ca7120bbb96f20">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessRole"/>
+        <archimate:association rdf:resource="urn:uuid:id-67ccb819d7284462a8b9045f23e437d0"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-e939a980803d4261825d201a2d7d4d83"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f"/>
+        <rdfs:label xml:lang="en">Distributer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-561dbe4948034f29b950c9ee130847ff -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-561dbe4948034f29b950c9ee130847ff">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessFunction"/>
+        <archimate:flow rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-01a27c33b42045f58a72188c63a03964"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-850be7a2e9234524a0c5015312ba9a29"/>
+        <rdfs:label xml:lang="en">Supply</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-5655f0d9f913431da9ca25d797df0543 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-5655f0d9f913431da9ca25d797df0543">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-850be7a2e9234524a0c5015312ba9a29"/>
+        <rdfs:label xml:lang="en">Plant</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-5b495e1ecc9d4535b52c0cbee5b4922c -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-5b495e1ecc9d4535b52c0cbee5b4922c">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#Node"/>
+        <archimate:association rdf:resource="urn:uuid:id-4675e30568284dfa9f43da16bc79c9a6"/>
+        <archimate:realization rdf:resource="urn:uuid:id-709a7fa5402546c4ba83cb1d355f4c89"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-f285783135034d34b0e880264d239d3b"/>
+        <rdfs:label xml:lang="en">Node Application</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-67ccb819d7284462a8b9045f23e437d0 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-67ccb819d7284462a8b9045f23e437d0">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-d0e0a712c6d54e7e8f4667d694a652db"/>
+        <rdfs:label xml:lang="en">Supply Chain Entity</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-6d7fc1370fcb48959daae518ea90b265 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-6d7fc1370fcb48959daae518ea90b265">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessRole"/>
+        <archimate:association rdf:resource="urn:uuid:id-67ccb819d7284462a8b9045f23e437d0"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f"/>
+        <rdfs:label xml:lang="en">Manufacturer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-709a7fa5402546c4ba83cb1d355f4c89 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-709a7fa5402546c4ba83cb1d355f4c89">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#ApplicationComponent"/>
+        <archimate:serving rdf:resource="urn:uuid:id-94b45ca39ca948ceaf8e7298e4f4319a"/>
+        <rdfs:label xml:lang="en">Blockchain Client</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-7ebea9902817415fabf25e46288f320e -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-7ebea9902817415fabf25e46288f320e">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-12fe30055f3b403ca291d4680c118a23"/>
+        <rdfs:label xml:lang="en">Data Model</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-84f48c55421342a2b8522299294517c5 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-84f48c55421342a2b8522299294517c5">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessRole"/>
+        <archimate:association rdf:resource="urn:uuid:id-67ccb819d7284462a8b9045f23e437d0"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-94c418f274254d8a920235a645303a6e"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f"/>
+        <rdfs:label xml:lang="en">Shipper</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-850be7a2e9234524a0c5015312ba9a29 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-850be7a2e9234524a0c5015312ba9a29">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-152aef559b5e408e96531aa5e639d227"/>
+        <rdfs:label xml:lang="en">Harvesting</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-87fda2cdc96b4a12b9bf8616a09ac2e1 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-87fda2cdc96b4a12b9bf8616a09ac2e1">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-152aef559b5e408e96531aa5e639d227"/>
+        <rdfs:label xml:lang="en">Wholesale</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-91c3cb8fd6f645f3ba112816b7e1cf93 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-91c3cb8fd6f645f3ba112816b7e1cf93">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessRole"/>
+        <archimate:association rdf:resource="urn:uuid:id-67ccb819d7284462a8b9045f23e437d0"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-561dbe4948034f29b950c9ee130847ff"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f"/>
+        <rdfs:label xml:lang="en">Harvester</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-926385f5af5f41f3897a58f1b10fe1c9 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-926385f5af5f41f3897a58f1b10fe1c9">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-12fe30055f3b403ca291d4680c118a23"/>
+        <rdfs:label xml:lang="en">Data Syntax</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-94b45ca39ca948ceaf8e7298e4f4319a -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-94b45ca39ca948ceaf8e7298e4f4319a">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#ApplicationInterface"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-561dbe4948034f29b950c9ee130847ff"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-94c418f274254d8a920235a645303a6e"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-e939a980803d4261825d201a2d7d4d83"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-f32e4603611141d899779f82e71be7ba"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-e5ba21c278ba4a8486f8d3bf1192d89c"/>
+        <rdfs:label xml:lang="en">Wallet App</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-94c418f274254d8a920235a645303a6e -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-94c418f274254d8a920235a645303a6e">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessFunction"/>
+        <archimate:flow rdf:resource="urn:uuid:id-e939a980803d4261825d201a2d7d4d83"/>
+        <archimate:flow rdf:resource="urn:uuid:id-eda65277dfba4fd987007920fc06210c"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-e645b7b29f464c3db5ccee841a68257a"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-427715fd2c1c4105a6f80f6778cb9c34"/>
+        <rdfs:label xml:lang="en">Ship</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-97c6fe5add42450083aa148e8a9688d8 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-97c6fe5add42450083aa148e8a9688d8">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-98c01165200a4f37872c7b85865a05d4"/>
+        <rdfs:label xml:lang="en">Furniture</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-98c01165200a4f37872c7b85865a05d4 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-98c01165200a4f37872c7b85865a05d4">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-152aef559b5e408e96531aa5e639d227"/>
+        <rdfs:label xml:lang="en">Manufacturing</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#Contract"/>
+        <archimate:association rdf:resource="urn:uuid:id-d0e0a712c6d54e7e8f4667d694a652db"/>
+        <rdfs:label xml:lang="en">Smart Contract</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-c1d7df77866441bab289320935cf9fb0 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-c1d7df77866441bab289320935cf9fb0">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:association rdf:resource="urn:uuid:id-926385f5af5f41f3897a58f1b10fe1c9"/>
+        <rdfs:label xml:lang="en">XML</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-ce9dfdd3d92347e8b2c0f4603a60b19f -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-ce9dfdd3d92347e8b2c0f4603a60b19f">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#Device"/>
+        <archimate:association rdf:resource="urn:uuid:id-38b251df006e460c924fe1db102762ad"/>
+        <archimate:serving rdf:resource="urn:uuid:id-5b495e1ecc9d4535b52c0cbee5b4922c"/>
+        <rdfs:label xml:lang="en">Virtual Machine</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-d0e0a712c6d54e7e8f4667d694a652db -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-d0e0a712c6d54e7e8f4667d694a652db">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-7ebea9902817415fabf25e46288f320e"/>
+        <rdfs:label xml:lang="en">Data Entity</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-e2e7cf2fec184896a4c7b00c27ff4948 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-e2e7cf2fec184896a4c7b00c27ff4948">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-ec9f1d713ed04db0bdae9fd27ea9b09d"/>
+        <rdfs:label xml:lang="en">Bamboo</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-e5ba21c278ba4a8486f8d3bf1192d89c -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-e5ba21c278ba4a8486f8d3bf1192d89c">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#DataObject"/>
+        <archimate:realization rdf:resource="urn:uuid:id-a5e7d160476c449ca342489c9b3f3d9f"/>
+        <rdfs:label xml:lang="en">Shared Ledger</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-e645b7b29f464c3db5ccee841a68257a -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-e645b7b29f464c3db5ccee841a68257a">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#ApplicationService"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-94b45ca39ca948ceaf8e7298e4f4319a"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-e5ba21c278ba4a8486f8d3bf1192d89c"/>
+        <rdfs:label xml:lang="en">Order Tracking Service</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-e939a980803d4261825d201a2d7d4d83 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-e939a980803d4261825d201a2d7d4d83">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessFunction"/>
+        <archimate:flow rdf:resource="urn:uuid:id-f32e4603611141d899779f82e71be7ba"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-e645b7b29f464c3db5ccee841a68257a"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-22e64c7543f345279a421860d491d376"/>
+        <rdfs:label xml:lang="en">Distribute</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-eab9887914264b07932f3cd2159e4caa -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-eab9887914264b07932f3cd2159e4caa">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:composition rdf:resource="urn:uuid:id-e2e7cf2fec184896a4c7b00c27ff4948"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-97c6fe5add42450083aa148e8a9688d8"/>
+        <rdfs:label xml:lang="en">Bookshelf</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-ec9f1d713ed04db0bdae9fd27ea9b09d -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-ec9f1d713ed04db0bdae9fd27ea9b09d">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-5655f0d9f913431da9ca25d797df0543"/>
+        <rdfs:label xml:lang="en">Grass</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-eda65277dfba4fd987007920fc06210c -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-eda65277dfba4fd987007920fc06210c">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessProcess"/>
+        <archimate:composition rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
+        <archimate:composition rdf:resource="urn:uuid:id-561dbe4948034f29b950c9ee130847ff"/>
+        <archimate:composition rdf:resource="urn:uuid:id-94c418f274254d8a920235a645303a6e"/>
+        <archimate:composition rdf:resource="urn:uuid:id-e939a980803d4261825d201a2d7d4d83"/>
+        <archimate:composition rdf:resource="urn:uuid:id-f32e4603611141d899779f82e71be7ba"/>
+        <rdfs:label xml:lang="en">Product Sale</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-eeff92e7c32c4ddb9e43c1cb39fb5755 -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-eeff92e7c32c4ddb9e43c1cb39fb5755">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessObject"/>
+        <archimate:specialization rdf:resource="urn:uuid:id-7ebea9902817415fabf25e46288f320e"/>
+        <rdfs:label xml:lang="en">Core Data Model</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-f285783135034d34b0e880264d239d3b -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-f285783135034d34b0e880264d239d3b">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#Artifact"/>
+        <archimate:realization rdf:resource="urn:uuid:id-e5ba21c278ba4a8486f8d3bf1192d89c"/>
+        <rdfs:label xml:lang="en">Distributed Ledger</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- urn:uuid:id-f32e4603611141d899779f82e71be7ba -->
+
+    <NamedIndividual rdf:about="urn:uuid:id-f32e4603611141d899779f82e71be7ba">
+        <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessFunction"/>
+        <archimate:triggering rdf:resource="urn:uuid:id-01a27c33b42045f58a72188c63a03964"/>
+        <archimate:writeAccess rdf:resource="urn:uuid:id-87fda2cdc96b4a12b9bf8616a09ac2e1"/>
+        <rdfs:label xml:lang="en">Sell</rdfs:label>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+

@@ -1,4 +1,4 @@
-import { BambooHarvest } from "../../generated/openapi/typescript-axios";
+import { Bamboo } from "../business-entities";
 
 /**
  * Responsible for converting model entities such as the `BambooHarvest` to and
@@ -21,7 +21,7 @@ export class BambooHarvestConverter {
    * @param arr The array containing the values of properties describing a
    * `BambooHarvest` model entity.
    */
-  public static ofSolidityStruct(arr: any[]): BambooHarvest {
+  public static ofSolidityStruct(arr: any[]): Bamboo {
     return {
       id: arr[BambooHarvestConverter.SOLIDITY_FIELD_ID],
       location: arr[BambooHarvestConverter.SOLIDITY_FIELD_LOCATION],
@@ -31,7 +31,7 @@ export class BambooHarvestConverter {
     };
   }
 
-  public static ofSolidityStructList(arrayOfArrays: any[][]): BambooHarvest[] {
+  public static ofSolidityStructList(arrayOfArrays: any[][]): Bamboo[] {
     return arrayOfArrays.map(BambooHarvestConverter.ofSolidityStruct);
   }
 }

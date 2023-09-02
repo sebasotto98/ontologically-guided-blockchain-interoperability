@@ -53,10 +53,10 @@ export interface BambooHarvest {
     endedAt: string;
     /**
      * 
-     * @type {string}
+     * @type {object}
      * @memberof BambooHarvest
      */
-    harvester: string;
+    harvester: object;
 }
 /**
  * 

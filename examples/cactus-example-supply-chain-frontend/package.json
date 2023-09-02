@@ -57,7 +57,7 @@
     "@hyperledger/cactus-api-client": "2.0.0-alpha.1",
     "@hyperledger/cactus-common": "2.0.0-alpha.1",
     "@hyperledger/cactus-core-api": "2.0.0-alpha.1",
-    "@hyperledger/cactus-example-supply-chain-business-logic-plugin": "2.0.0-alpha.1",
+    "@hyperledger/cactus-example-supply-chain-business-logic-plugin": "file:../cactus-example-supply-chain-business-logic-plugin",
     "@hyperledger/cactus-plugin-consortium-manual": "2.0.0-alpha.1",
     "@hyperledger/cactus-plugin-ledger-connector-besu": "2.0.0-alpha.1",
     "@hyperledger/cactus-plugin-ledger-connector-fabric": "2.0.0-alpha.1",

@@ -2,16 +2,17 @@ import { Component, Inject, OnInit } from "@angular/core";
 
 import { Logger, LoggerProvider } from "@hyperledger/cactus-common";
 import { ApiClient } from "@hyperledger/cactus-api-client";
-import {
-  Shipment,
-  DefaultApi as SupplyChainApi,
-} from "@hyperledger/cactus-example-supply-chain-business-logic-plugin";
 
 import { BESU_DEMO_LEDGER_ID } from "../../../constants";
 import { ShipmentDetailPage } from "../shipment-detail/shipment-detail.page";
 import { ModalController } from "@ionic/angular";
 
 import { AuthConfig } from "../../common/auth-config";
+
+import {
+  Shipment,
+  DefaultApi as SupplyChainApi,
+} from "../../../../../cactus-example-supply-chain-business-logic-plugin/src/main/typescript/model/business-entities";
 
 @Component({
   selector: "app-shipment-list",

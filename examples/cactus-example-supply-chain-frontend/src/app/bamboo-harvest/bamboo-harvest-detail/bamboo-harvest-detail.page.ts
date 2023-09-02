@@ -5,10 +5,14 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { ModalController } from "@ionic/angular";
 
 import { ApiClient } from "@hyperledger/cactus-api-client";
-import { BambooHarvest } from "@hyperledger/cactus-example-supply-chain-business-logic-plugin";
 
 import { QUORUM_DEMO_LEDGER_ID } from "../../../constants";
 import { Logger, LoggerProvider } from "@hyperledger/cactus-common";
+
+import {
+  Bamboo,
+  BusinessRole,
+} from "../../../../../cactus-example-supply-chain-business-logic-plugin/src/main/typescript/model/business-entities";
 
 @Component({
   selector: "app-bamboo-harvest-detail",
@@ -19,7 +23,8 @@ export class BambooHarvestDetailPage implements OnInit {
   private readonly log: Logger;
   public form: FormGroup;
   @Input()
-  public bambooHarvest: BambooHarvest;
+  public bambooHarvest: Bamboo;
+  private harvester: BusinessRole;
 
   constructor(
     private readonly baseClient: ApiClient,
@@ -33,10 +38,19 @@ export class BambooHarvestDetailPage implements OnInit {
   async ngOnInit(): Promise<void> {
     this.log.debug("component initialized.", this.bambooHarvest);
 
+    if (!this.harvester) {
+      this.harvester = {
+        entity: "Harvester",
+        name: "Captain Lumberjack Logging Corporation",
+        inventoryQuantity: 100,
+        accountBalance: 100,
+      };
+    }
+
     if (!this.bambooHarvest) {
       this.bambooHarvest = {
         id: uuidv4(),
-        harvester: "Captain Lumberjack Logging Corporation",
+        harvester: this.harvester,
         location: "London, NW1 2DB, United Kingdom",
         startedAt: new Date(2020, 6, 10, 7, 0, 0, 0).toJSON(),
         endedAt: new Date(2020, 6, 10, 16, 0, 0, 0).toJSON(),

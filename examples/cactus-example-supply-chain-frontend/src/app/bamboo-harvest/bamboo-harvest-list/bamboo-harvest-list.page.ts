@@ -2,16 +2,17 @@ import { Component, Inject, OnInit } from "@angular/core";
 
 import { Logger, LoggerProvider } from "@hyperledger/cactus-common";
 import { ApiClient } from "@hyperledger/cactus-api-client";
-import {
-  BambooHarvest,
-  DefaultApi as SupplyChainApi,
-} from "@hyperledger/cactus-example-supply-chain-business-logic-plugin";
 
 import { QUORUM_DEMO_LEDGER_ID } from "../../../constants";
 import { BambooHarvestDetailPage } from "../bamboo-harvest-detail/bamboo-harvest-detail.page";
 import { ModalController } from "@ionic/angular";
 
 import { AuthConfig } from "../../common/auth-config";
+
+import {
+  Bamboo,
+  DefaultApi as SupplyChainApi,
+} from "../../../../../cactus-example-supply-chain-business-logic-plugin/src/main/typescript/model/business-entities";
 
 @Component({
   selector: "app-bamboo-harvest-list",
@@ -20,7 +21,7 @@ import { AuthConfig } from "../../common/auth-config";
 })
 export class BambooHarvestListPage implements OnInit {
   private readonly log: Logger;
-  private bambooHarvests: BambooHarvest[];
+  private bambooHarvests: Bamboo[];
   private _supplyChainApi: SupplyChainApi | undefined;
 
   constructor(
@@ -60,7 +61,7 @@ export class BambooHarvestListPage implements OnInit {
     this.log.debug(`Fetched BambooHarvest data: %o`, bambooHarvests);
   }
 
-  async clickShowDetail(bambooHarvest: BambooHarvest): Promise<void> {
+  async clickShowDetail(bambooHarvest: Bamboo): Promise<void> {
     this.log.debug("clickShowDetail()", bambooHarvest);
 
     const modal = await this.modalController.create({
@@ -71,7 +72,7 @@ export class BambooHarvestListPage implements OnInit {
     });
     modal.present();
     const overlayEventDetail = await modal.onDidDismiss();
-    const bambooHarvest2 = overlayEventDetail.data as BambooHarvest;
+    const bambooHarvest2 = overlayEventDetail.data as Bamboo;
     this.log.debug("clickShowDetail() detail presented OK", bambooHarvest2);
 
     if (bambooHarvest2) {
@@ -87,7 +88,7 @@ export class BambooHarvestListPage implements OnInit {
     });
     modal.present();
     const overlayEventDetail = await modal.onDidDismiss();
-    const bambooHarvest = overlayEventDetail.data as BambooHarvest;
+    const bambooHarvest = overlayEventDetail.data as Bamboo;
     this.log.debug("clickAddNew() detail presented OK", bambooHarvest);
     if (bambooHarvest) {
       const res = await this.supplyChainApi.insertBambooHarvestV1({

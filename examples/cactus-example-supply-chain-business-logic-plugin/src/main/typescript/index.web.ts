@@ -1,1 +1,1 @@
-export * from "./generated/openapi/typescript-axios/index";
+export * from "./model/business-entities";

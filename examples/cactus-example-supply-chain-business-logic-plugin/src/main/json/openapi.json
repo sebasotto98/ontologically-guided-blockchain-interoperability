@@ -98,7 +98,7 @@
                         "maxLength": 1024
                     },
                     "harvester": {
-                        "type": "string",
+                        "type": "object",
                         "nullable": false,
                         "minLength": 1,
                         "maxLength": 1024

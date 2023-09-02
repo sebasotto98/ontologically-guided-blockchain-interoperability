@@ -1,4 +1,4 @@
-import { Bookshelf } from "../../generated/openapi/typescript-axios/index";
+import { Bookshelf } from "../business-entities";
 
 /**
  * Responsible for converting model entities such as the `Bookshelf` to and
@@ -11,6 +11,7 @@ export class BookshelfConverter {
   public static SOLIDITY_FIELD_ID = 0;
   public static SOLIDITY_FIELD_SHELF_COUNT = 1;
   public static SOLIDITY_FIELD_BAMBOO_HARVEST_ID = 2;
+  public static SOLIDITY_FIELD_MANUFACTURER = 3;
 
   /**
    * Converts a `Bookshelf` model entity from an array representation (
@@ -24,6 +25,7 @@ export class BookshelfConverter {
       id: arr[BookshelfConverter.SOLIDITY_FIELD_ID],
       shelfCount: arr[BookshelfConverter.SOLIDITY_FIELD_SHELF_COUNT],
       bambooHarvestId: arr[BookshelfConverter.SOLIDITY_FIELD_BAMBOO_HARVEST_ID],
+      manufacturer: arr[BookshelfConverter.SOLIDITY_FIELD_MANUFACTURER],
     };
   }
 
