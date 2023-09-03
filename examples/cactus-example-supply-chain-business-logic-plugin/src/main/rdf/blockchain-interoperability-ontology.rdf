@@ -339,7 +339,7 @@
         <archimate:flow rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
         <archimate:triggering rdf:resource="urn:uuid:id-01a27c33b42045f58a72188c63a03964"/>
         <archimate:writeAccess rdf:resource="urn:uuid:id-850be7a2e9234524a0c5015312ba9a29"/>
-        <rdfs:label xml:lang="en">Supply</rdfs:label>
+        <rdfs:label xml:lang="en">Harvest</rdfs:label>
     </NamedIndividual>
     
 
@@ -619,8 +619,8 @@
 
     <NamedIndividual rdf:about="urn:uuid:id-eda65277dfba4fd987007920fc06210c">
         <rdf:type rdf:resource="http://bp4mc2.org/def/archimate#BusinessProcess"/>
-        <archimate:composition rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
         <archimate:composition rdf:resource="urn:uuid:id-561dbe4948034f29b950c9ee130847ff"/>
+        <archimate:composition rdf:resource="urn:uuid:id-00f2f859356543cb8c0b8212e2731e1c"/>
         <archimate:composition rdf:resource="urn:uuid:id-94c418f274254d8a920235a645303a6e"/>
         <archimate:composition rdf:resource="urn:uuid:id-e939a980803d4261825d201a2d7d4d83"/>
         <archimate:composition rdf:resource="urn:uuid:id-f32e4603611141d899779f82e71be7ba"/>

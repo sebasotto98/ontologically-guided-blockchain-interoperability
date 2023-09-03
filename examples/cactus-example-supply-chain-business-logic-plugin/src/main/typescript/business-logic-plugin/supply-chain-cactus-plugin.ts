@@ -505,13 +505,10 @@ export class SupplyChainCactusPlugin
       const func = this.businessFunctions?.find(
         (func) => func.entity === funcName,
       ) as BusinessFunction;
-      console.log("!!! " + func + " !!!");
       if (func?.triggeredBy === sourceRole) {
-        console.log("??? " + func + " ???");
         sourceFunction = func;
       }
       if (func?.triggeredBy === targetRole) {
-        console.log("%%% " + func + " %%%");
         targetFunction = func;
       }
       funcs.push(func);
